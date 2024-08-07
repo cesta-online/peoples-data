@@ -1,9 +1,9 @@
 ---
-title: "People's Data"
+title: "Explore the Knowledge Graph"
 ---
 
 Our People's Data knowledge graph is integral to Wikidata. We are adding entries to build more pluralist data structures around concepts like "drone". Select a search term to explore a concept within the context of Wikidata.
 
-```{ojs}
+//```{ojs}
 //put your observable graph here
-```
+//```

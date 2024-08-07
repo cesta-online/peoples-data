@@ -2,8 +2,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/knowledge-graph.html",
-      "/schema.html"
+      "/schema.html",
+      "/knowledge-graph.html"
     ]
   }
 ]

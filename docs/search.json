@@ -1,9 +1,30 @@
 [
   {
+    "objectID": "knowledge-graph.html",
+    "href": "knowledge-graph.html",
+    "title": "Explore the Knowledge Graph",
+    "section": "",
+    "text": "Our People’s Data knowledge graph is integral to Wikidata. We are adding entries to build more pluralist data structures around concepts like “drone”. Select a search term to explore a concept within the context of Wikidata.\n//{ojs} //put your observable graph here //"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "People’s Data",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nPeople’s Data\n\n\n \n\n\n\n\nPeople’s Data - Developing a Schema\n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDeveloping a Schema\n\n\n \n\n\n\n\nExplore the Knowledge Graph\n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "schema.html",
+    "href": "schema.html",
+    "title": "Developing a Schema",
+    "section": "",
+    "text": "To build a pluralist data structure, we sought a method for arriving at properties from descriptions. Descriptions range from functional categorization to marketing rhetoric meant to pursuade and entice buyers. That makes it difficult to draw comparisons. The approach outlined below takes us from rich description to properties that are more easily understood in relation to each other and their context.\nWe begin with multiple descriptions from different perspectives. For military equipment, the perspectives we use are these five: business (manufacture or sales), legal (government legislation), enforcement (police and other government agencies), civic (organizations and community groups), and individual (direct personal experience).\nThis is an example of descriptions to properties for drones.\n\n\n\n\n\n\n\n\n\n\nManufacturer\nLegal\nenforcement\ncivic\nindividual\n\n\n\n\nmultiple\none to many\nmultiple\nmultiple\nmultiple\n\n\ncapabilities\ncategory\nuse\neffects\nexperience\n\n\n\n\n\n\n\n\n\n\nschema\n\n\n\ndrone\n\ndrone\n\n\n\nLEGAL\n\nLEGAL\n\n\n\nLEGAL-&gt;drone\n\n\nCat 1\n\n\n\nrobot\n\nrobot\n\n\n\nLEGAL-&gt;robot\n\n\nCat 1\n\n\n\nMANUFACTURER\n\nMANUFACTURER\n\n\n\nMANUFACTURER-&gt;drone\n\n\nheat sensitive\n\n\n\nMANUFACTURER-&gt;drone\n\n\nhigh-res camera\n\n\n\nENFORCEMENT\n\nENFORCEMENT\n\n\n\nENFORCEMENT-&gt;drone\n\n\nsurveillance\n\n\n\nENFORCEMENT-&gt;drone\n\n\ncommunication\n\n\n\nINDIVIDUAL\n\nINDIVIDUAL\n\n\n\nINDIVIDUAL-&gt;drone\n\n\nchilling\n\n\n\nINDIVIDUAL-&gt;drone\n\n\nintimidating\n\n\n\nCIVIC\n\nCIVIC\n\n\n\nCIVIC-&gt;drone\n\n\nprivacy\n\n\n\nCIVIC-&gt;drone\n\n\nmental health"
   }
 ]
