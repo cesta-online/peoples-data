@@ -1,0 +1,74 @@
+---
+title: "People's Data - Developing a Schema"
+---
+
+To build a pluralist data structure, we sought a method for arriving at properties from descriptions. Descriptions range from functional categorization to marketing rhetoric meant to pursuade and entice buyers. That makes it difficult to draw comparisons. The approach outlined below takes us from rich description to properties that are more easily understood in relation to each other and their context.
+
+We begin with multiple descriptions from different perspectives. For military equipment, the perspectives we use are these five: business (manufacture or sales), legal (government legislation), enforcement (police and other government agencies), civic (organizations and community groups), and individual (direct personal experience). 
+
+This is an example of descriptions to properties for drones.
+
++------------------+----------------+----------------+-----------+------------+
+| Manufacturer     | Legal          |  enforcement   | civic     | individual |
++==================+================+================+===========+============+
+| multiple         | one to many    | multiple       | multiple  | multiple   |
++------------------+----------------+----------------+-----------+------------+
+| capabilities     | category       | use            |  effects  | experience |
++------------------+----------------+----------------+-----------+------------+
+
+
+```{dot}
+
+digraph schema {
+  
+  layout = neato
+  fontname="Helvetica"
+  labelloc = "b"
+  node [
+        shape = circle
+        fontname="Helvetica bold,Arial bold,sans-serif"
+        fontsize="14"
+        width = 2
+		color="#00000088"
+		style = filled
+        ]
+  edge [
+        len = 3 
+        penwidth = 1.5 
+        fontname="Helvetica,Arial,sans-serif"
+        fontsize="11"
+        arrowhead=open
+        ]
+  start = regular
+  normalize = 1
+  "drone"  [fillcolor = white]
+  "LEGAL" [fillcolor = yellowgreen fontcolor = white]
+  "MANUFACTURER" [fillcolor = magenta fontcolor = white]
+  "ENFORCEMENT" [fillcolor = deeppink fontcolor = white]
+  "INDIVIDUAL" [fillcolor = deepskyblue fontcolor = white]
+  "CIVIC" [fillcolor = purple fontcolor = white]
+  "LEGAL"->"drone" [label="Cat 1"]
+  "LEGAL"->"robot" [label="Cat 1"]
+  "MANUFACTURER"->"drone"  [label="heat sensitive"]
+  "MANUFACTURER"->"drone"   [label="high-res camera"]
+  "ENFORCEMENT"->"drone"   [label="surveillance"]
+  "ENFORCEMENT"->"drone"   [label="communication"]
+  "CIVIC"->"drone" [label="privacy"]
+  "CIVIC"->"drone" [label="mental health"]
+  "INDIVIDUAL"->"drone" [label="chilling"]
+  "INDIVIDUAL"->"drone" [label="intimidating"]
+
+}
+
+
+
+The following schema diagram shows how we expand and extend the concept of drone as part of military equipment used by law enforcement. Most drone entries are for specific models made by manufacturers. We connect those different models to a general class, "drone". We then connect "drone" to California legislation AB481 Category 1 of which drone is a subclass. We connect California law enforcement agencies that use drones both to the class "drone" and to the specific model of drone when we have that information. 
+
+The schema takes specific 
+
+
+```
+
+
+
+

@@ -1,0 +1,11 @@
+---
+title: "People's Data"
+listing:
+  type: table
+  contents:
+    - "schema.qmd"
+    - "knowledge-graph.qmd"
+
+---
+
+
