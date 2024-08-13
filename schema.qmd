@@ -1,20 +1,31 @@
 ---
-title: "Developing a Schema"
+title: "Developing a pluralist graph data structure"
 ---
 
-To build a pluralist data structure, we sought a method for arriving at properties from descriptions. Descriptions range from functional categorization to marketing rhetoric meant to pursuade and entice buyers. That makes it difficult to draw comparisons. The approach outlined below takes us from rich description to properties that are more easily understood in relation to each other and their context.
+Data structures help us to find information within an otherwise undifferentiated swamp. But data structures are not neutral. They involve decision-making and they are constrained by those decisions. 
+[put here text about why wikidata]
 
-We begin with multiple descriptions from different perspectives. For military equipment, the perspectives we use are these five: business (manufacture or sales), legal (government legislation), enforcement (police and other government agencies), civic (organizations and community groups), and individual (direct personal experience). 
+# Working within the constraints of Wikidata
 
-This is an example of descriptions to properties for drones.
+While Wikipedia allows for long narrative description of concepts, Wikidata is designed as a graph structure of nodes and links between nodes that can be explored quickly and easiy. Deriving properties from descriptions is a reductive process; important information and context is lost. To build a pluralist data structure, we sought a method for arriving at concise properties and values from long descriptions. 
+
+For military equipment, 'description' can mean something very different depending on the source. They can range from functional categorization to marketing rhetoric meant to pursuade and entice buyers. That makes it difficult to draw comparisons. The approach outlined below takes us from rich description to properties that are more easily understood in relation to each other and their context. Businesses focus on technological 
+
+# From a single description to multiple perspectives
+
+The most visible and available descriptions of military equipment come from the businesses that market the equipment for sale. We gather additional descriptions from these other sources:  legal (government legislation), enforcement (police and other government agencies), civic (organizations and community groups), and individual (direct personal experience). 
 
 +------------------+----------------+----------------+-----------+------------+
-| Manufacturer     | Legal          |  enforcement   | civic     | individual |
+| business         | Legal          |  enforcement   | civic     | individual |
 +==================+================+================+===========+============+
 | multiple         | one to many    | multiple       | multiple  | multiple   |
 +------------------+----------------+----------------+-----------+------------+
 | capabilities     | category       | use            |  effects  | experience |
 +------------------+----------------+----------------+-----------+------------+
+
+# Multiple perspectives to arrive at properties for the concept "drone"
+
+When we began this project, most drone entries in Wikidata were for specific models made by manufacturers. We connect those different models to a general class, "Miniature Unmanned Aerial Vehicle" (alias "drone"). We then connect "drone" to California legislation AB481 Category 1 of which drone is a subclass. We connect California law enforcement agencies that use drones both to the class "drone" and to the specific model of drone when we have that information.  
 
 
 ```{dot}
@@ -43,14 +54,14 @@ digraph schema {
   normalize = 1
   "drone"  [fillcolor = white]
   "LEGAL" [fillcolor = yellowgreen fontcolor = white]
-  "MANUFACTURER" [fillcolor = magenta fontcolor = white]
+  "BUSINESS" [fillcolor = magenta fontcolor = white]
   "ENFORCEMENT" [fillcolor = deeppink fontcolor = white]
   "INDIVIDUAL" [fillcolor = deepskyblue fontcolor = white]
   "CIVIC" [fillcolor = purple fontcolor = white]
   "LEGAL"->"drone" [label="Cat 1"]
   "LEGAL"->"robot" [label="Cat 1"]
-  "MANUFACTURER"->"drone"  [label="heat sensitive"]
-  "MANUFACTURER"->"drone"   [label="high-res camera"]
+  "BUSINESS"->"drone"  [label="heat sensitive"]
+  "BUSINESS"->"drone"   [label="high-res camera"]
   "ENFORCEMENT"->"drone"   [label="surveillance"]
   "ENFORCEMENT"->"drone"   [label="communication"]
   "CIVIC"->"drone" [label="privacy"]
@@ -58,13 +69,16 @@ digraph schema {
   "INDIVIDUAL"->"drone" [label="chilling"]
   "INDIVIDUAL"->"drone" [label="intimidating"]
 
+  //| label: fig-perspectives
+//| fig-cap: "This diagram shows the how we arrive at multiple points of view on a single concept, in this case "drone"."
+
 }
 
 
 
-The following schema diagram shows how we expand and extend the concept of drone as part of military equipment used by law enforcement. Most drone entries are for specific models made by manufacturers. We connect those different models to a general class, "drone". We then connect "drone" to California legislation AB481 Category 1 of which drone is a subclass. We connect California law enforcement agencies that use drones both to the class "drone" and to the specific model of drone when we have that information. 
 
-The schema takes specific 
+
+
 
 
 ```

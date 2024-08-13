@@ -4,6 +4,130 @@ title: "Explore the Knowledge Graph"
 
 Our People's Data knowledge graph is integral to Wikidata. We are adding entries to build more pluralist data structures around concepts like "drone". Select a search term to explore a concept within the context of Wikidata.
 
-//```{ojs}
-//put your observable graph here
-//```
+```{ojs}
+viewof id = text({
+  title: 'Wikidata Unique Identifier (QID)',
+  //
+  value: (
+    new URLSearchParams(location.search).get("id") || "Q127786639"
+  ).replace(/_/g, ' '),
+  description: "For example, AB 481 Category 1 is Q127786639 and Rifle is Q124072. Limited to 10 ingoing and outgoing edges.",
+  submit: "Go"
+})
+
+```
+
+```{ojs}
+
+import {text} from "@jashkenas/inputs"
+```
+
+```{ojs}
+
+wrapText = (text, len = 15) => {
+  const words = lexer(text);
+  let lines = '';
+  let count = 0;
+  for (let word of words) {
+    if (count + word.length >= len) {
+      lines += `\n${word} `;
+      count = word.length;
+    } else {
+      lines += `${word} `;
+      count += word.length;
+    }
+  }
+  return lines.trim();
+}
+
+```
+
+```{ojs}
+
+// Here is the graph visualized
+
+dot`digraph "${id}" {
+  outputorder=edgesfirst
+  graph[rankdir=LR, center=true]
+  node[shape=none, fontname="Source Serif Pro", fontsize=13]
+  edge[arrowsize=0.6, arrowhead=vee, color=gray]
+  ${nodes}
+  ${edges}
+ }`
+
+```
+
+```{ojs}
+import {queryDispatcher} from "@lukesmurray/wikidata-sparql-helpers"
+
+query = `SELECT ?parent ?parentLabel ?count
+WHERE
+{
+  {
+    SELECT ?parent (COUNT(?child) AS ?count)
+    WHERE
+    {
+      ?parent wdt:P40 ?child.
+    }
+    GROUP BY ?parent
+    ORDER BY DESC(?count)
+    LIMIT 10
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY DESC(?count)
+LIMIT 10`
+
+
+nodes = picturein.map(i => `"${wrapText(i.valueLabel)}" [URL="?id=${i.value.split("/")[i.value.split("/").length-1]}", fontcolor="#3182bd", target="_top"]`).concat(pictureout.map(i => `"${wrapText(i.valueLabel)}" [URL="?id=${i.value.split("/")[i.value.split("/").length-1]}", fontcolor="#3182bd", target="_top"]`)).join("\n")
+
+edges = Array.from(new Set(picturein.map(i => `"${wrapText(i.valueLabel)}" -> "${wrapText(i.itemLabel)}" [label="${wrapText(i.edgeLabel)}"]`).concat(pictureout.map(i => `"${wrapText(i.itemLabel)}" -> "${wrapText(i.valueLabel)}" [label="${wrapText(i.edgeLabel)}"]`)))).join("\n")
+
+
+graphqueryout = `SELECT ?item ?itemLabel ?itemImage ?value ?valueLabel ?valueImage ?edgeLabel WHERE {
+  {BIND(wd:${id} AS ?item)
+  ?item ?wdt ?value.
+  ?edge a wikibase:Property;
+        wikibase:propertyType wikibase:WikibaseItem; # note: to show all statements, removing this is not enough, the graph view only shows entities
+        wikibase:directClaim ?wdt.
+  OPTIONAL { ?item wdt:P18 ?itemImage. }
+  OPTIONAL { ?value wdt:P18 ?valueImage. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}}
+}
+LIMIT 10`
+
+graphqueryin = `SELECT ?item ?itemLabel ?itemImage ?value ?valueLabel ?valueImage ?edgeLabel WHERE {
+  {BIND(wd:${id} AS ?item)
+  ?value ?wdt ?item.
+  ?edge a wikibase:Property;
+        wikibase:propertyType wikibase:WikibaseItem; # note: to show all statements, removing this is not enough, the graph view only shows entities
+        wikibase:directClaim ?wdt.
+  OPTIONAL { ?item wdt:P18 ?itemImage. }
+  OPTIONAL { ?value wdt:P18 ?valueImage. }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}}
+}
+LIMIT 10`
+
+pictureout = queryDispatcher.query(graphqueryout)
+
+picturein = queryDispatcher.query(graphqueryin)
+
+picturein.map(i => `"${wrapText(i.itemLabel)}" -> "${wrapText(i.valueLabel)}"`).join("\n")
+
+```
+
+## References:
+```{ojs}
+{
+  const refs = [
+    '@mbostock/working-with-wikipedia-data',
+    '@mbostock/graphviz',
+    '@observablehq/how-observable-runs',
+    '@observablehq/notebook-visualizer',
+    '@chriszs/wikipedia-concept-graph'
+  ];
+
+  return md`refs: ${refs.map(d => `[${d}](/${d})`).join(', ')}`;
+}
+
+```

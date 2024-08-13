@@ -1,0 +1,14 @@
+{
+  "name": "7886950f64819bf1",
+  "main": "7886950f64819bf1@788.js",
+  "version": "788.0.0",
+  "homepage": "https://observablehq.com/d/7886950f64819bf1",
+  "author": {
+    "name": "Nicole Coleman",
+    "url": "https://observablehq.com/@cncoleman"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}

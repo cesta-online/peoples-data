@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Peoples’ Data - Developing a Schema</title>
+<title>People’s Data - Developing a pluralist graph data structure</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -79,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Peoples’ Data</span>
+    <span class="navbar-title">People’s Data</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -108,14 +108,22 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#working-within-the-constraints-of-wikidata" id="toc-working-within-the-constraints-of-wikidata" class="nav-link active" data-scroll-target="#working-within-the-constraints-of-wikidata">Working within the constraints of Wikidata</a></li>
+  <li><a href="#from-a-single-description-to-multiple-perspectives" id="toc-from-a-single-description-to-multiple-perspectives" class="nav-link" data-scroll-target="#from-a-single-description-to-multiple-perspectives">From a single description to multiple perspectives</a></li>
+  <li><a href="#multiple-perspectives-to-arrive-at-properties-for-the-concept-drone" id="toc-multiple-perspectives-to-arrive-at-properties-for-the-concept-drone" class="nav-link" data-scroll-target="#multiple-perspectives-to-arrive-at-properties-for-the-concept-drone">Multiple perspectives to arrive at properties for the concept “drone”</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Developing a Schema</h1>
+<h1 class="title">Developing a pluralist graph data structure</h1>
 </div>
 
 
@@ -132,9 +140,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>To build a pluralist data structure, we sought a method for arriving at properties from descriptions. Descriptions range from functional categorization to marketing rhetoric meant to pursuade and entice buyers. That makes it difficult to draw comparisons. The approach outlined below takes us from rich description to properties that are more easily understood in relation to each other and their context.</p>
-<p>We begin with multiple descriptions from different perspectives. For military equipment, the perspectives we use are these five: business (manufacture or sales), legal (government legislation), enforcement (police and other government agencies), civic (organizations and community groups), and individual (direct personal experience).</p>
-<p>This is an example of descriptions to properties for drones.</p>
+<p>Data structures help us to find information within an otherwise undifferentiated swamp. But data structures are not neutral. They involve decision-making and they are constrained by those decisions. [put here text about why wikidata]</p>
+<section id="working-within-the-constraints-of-wikidata" class="level1">
+<h1>Working within the constraints of Wikidata</h1>
+<p>While Wikipedia allows for long narrative description of concepts, Wikidata is designed as a graph structure of nodes and links between nodes that can be explored quickly and easiy. Deriving properties from descriptions is a reductive process; important information and context is lost. To build a pluralist data structure, we sought a method for arriving at concise properties and values from long descriptions.</p>
+<p>For military equipment, ‘description’ can mean something very different depending on the source. They can range from functional categorization to marketing rhetoric meant to pursuade and entice buyers. That makes it difficult to draw comparisons. The approach outlined below takes us from rich description to properties that are more easily understood in relation to each other and their context. Businesses focus on technological</p>
+</section>
+<section id="from-a-single-description-to-multiple-perspectives" class="level1">
+<h1>From a single description to multiple perspectives</h1>
+<p>The most visible and available descriptions of military equipment come from the businesses that market the equipment for sale. We gather additional descriptions from these other sources: legal (government legislation), enforcement (police and other government agencies), civic (organizations and community groups), and individual (direct personal experience).</p>
 <table class="table">
 <colgroup>
 <col style="width: 23%">
@@ -145,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 </colgroup>
 <thead>
 <tr class="header">
-<th>Manufacturer</th>
+<th>business</th>
 <th>Legal</th>
 <th>enforcement</th>
 <th>civic</th>
@@ -169,6 +183,10 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
+</section>
+<section id="multiple-perspectives-to-arrive-at-properties-for-the-concept-drone" class="level1">
+<h1>Multiple perspectives to arrive at properties for the concept “drone”</h1>
+<p>When we began this project, most drone entries in Wikidata were for specific models made by manufacturers. We connect those different models to a general class, “Miniature Unmanned Aerial Vehicle” (alias “drone”). We then connect “drone” to California legislation AB481 Category 1 of which drone is a subclass. We connect California law enforcement agencies that use drones both to the class “drone” and to the specific model of drone when we have that information.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -210,22 +228,22 @@ ul.task-list li input[type="checkbox"] {
 <polygon fill="black" stroke="black" stroke-width="1.5" points="144.19,-322.03 153.87,-316.87 149.17,-321.44 154.16,-321.11 154.17,-321.36 154.19,-321.61 149.2,-321.94 154.47,-325.85 144.19,-322.03 144.19,-322.03"></polygon>
 <text text-anchor="middle" x="178.37" y="-322.26" font-family="Helvetica,Arial,sans-serif" font-size="11.00">Cat 1</text>
 </g>
-<!-- MANUFACTURER -->
+<!-- BUSINESS -->
 <g id="node3" class="node">
-<title>MANUFACTURER</title>
+<title>BUSINESS</title>
 <ellipse fill="magenta" stroke="#000000" stroke-opacity="0.533333" cx="511.54" cy="-72" rx="72" ry="72"></ellipse>
-<text text-anchor="middle" x="511.54" y="-67.8" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00" fill="white">MANUFACTURER</text>
+<text text-anchor="middle" x="511.54" y="-67.8" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00" fill="white">BUSINESS</text>
 </g>
-<!-- MANUFACTURER&#45;&gt;drone -->
+<!-- BUSINESS&#45;&gt;drone -->
 <g id="edge3" class="edge">
-<title>MANUFACTURER-&gt;drone</title>
+<title>BUSINESS-&gt;drone</title>
 <path fill="none" stroke="black" stroke-width="1.5" d="M514.54,-144.03C517.56,-172.68 521.75,-205.78 526.05,-235.24"></path>
 <polygon fill="black" stroke="black" stroke-width="1.5" points="527.58,-245.5 521.66,-236.27 526.6,-240.59 525.86,-235.64 526.11,-235.61 526.35,-235.57 527.09,-240.52 530.56,-234.94 527.58,-245.5 527.58,-245.5"></polygon>
 <text text-anchor="middle" x="490.51" y="-192.94" font-family="Helvetica,Arial,sans-serif" font-size="11.00">heat sensitive</text>
 </g>
-<!-- MANUFACTURER&#45;&gt;drone -->
+<!-- BUSINESS&#45;&gt;drone -->
 <g id="edge4" class="edge">
-<title>MANUFACTURER-&gt;drone</title>
+<title>BUSINESS-&gt;drone</title>
 <path fill="none" stroke="black" stroke-width="1.5" d="M526.84,-142.45C531.16,-170.94 535.48,-204.01 538.77,-233.61"></path>
 <polygon fill="black" stroke="black" stroke-width="1.5" points="539.88,-243.92 534.33,-234.46 539.1,-238.97 538.56,-234 538.81,-233.97 539.06,-233.95 539.59,-238.92 543.28,-233.49 539.88,-243.92 539.88,-243.92"></polygon>
 <text text-anchor="middle" x="497.53" y="-178.13" font-family="Helvetica,Arial,sans-serif" font-size="11.00">high-res camera</text>
@@ -299,6 +317,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
