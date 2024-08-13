@@ -1,5 +1,7 @@
 ---
 title: "Explore the Knowledge Graph"
+author: Jiaju Liu
+date: August 13, 2024
 ---
 
 Our People's Data knowledge graph is integral to Wikidata. We are adding entries to build more pluralist data structures around concepts like "drone". Select a search term to explore a concept within the context of Wikidata.
