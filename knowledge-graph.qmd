@@ -4,6 +4,7 @@ title: "Explore the Knowledge Graph"
 
 Our People's Data knowledge graph is integral to Wikidata. We are adding entries to build more pluralist data structures around concepts like "drone". Select a search term to explore a concept within the context of Wikidata.
 
+
 ```{ojs}
 viewof id = text({
   title: 'Wikidata Unique Identifier (QID)',
@@ -14,31 +15,6 @@ viewof id = text({
   description: "For example, AB 481 Category 1 is Q127786639 and Rifle is Q124072. Limited to 10 ingoing and outgoing edges.",
   submit: "Go"
 })
-
-```
-
-```{ojs}
-
-import {text} from "@jashkenas/inputs"
-```
-
-```{ojs}
-
-wrapText = (text, len = 15) => {
-  const words = lexer(text);
-  let lines = '';
-  let count = 0;
-  for (let word of words) {
-    if (count + word.length >= len) {
-      lines += `\n${word} `;
-      count = word.length;
-    } else {
-      lines += `${word} `;
-      count += word.length;
-    }
-  }
-  return lines.trim();
-}
 
 ```
 
@@ -113,6 +89,33 @@ pictureout = queryDispatcher.query(graphqueryout)
 picturein = queryDispatcher.query(graphqueryin)
 
 picturein.map(i => `"${wrapText(i.itemLabel)}" -> "${wrapText(i.valueLabel)}"`).join("\n")
+
+```
+
+```{ojs}
+lexer = text => text.split(/[_ ]/g)
+```
+
+```{ojs}
+import {text} from "@jashkenas/inputs"
+```
+
+```{ojs}
+wrapText = (text, len = 15) => {
+  const words = lexer(text);
+  let lines = '';
+  let count = 0;
+  for (let word of words) {
+    if (count + word.length >= len) {
+      lines += `\n${word} `;
+      count = word.length;
+    } else {
+      lines += `${word} `;
+      count += word.length;
+    }
+  }
+  return lines.trim();
+}
 
 ```
 

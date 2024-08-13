@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>People’s Data - Explore the Knowledge Graph</title>
+<title>Explore the Knowledge Graph – People’s Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -134,7 +134,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -176,15 +176,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Our People’s Data knowledge graph is integral to Wikidata. We are adding entries to build more pluralist data structures around concepts like “drone”. Select a search term to explore a concept within the context of Wikidata.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-startfrom="7" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 6;"><span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>viewof id <span class="op">=</span> <span class="fu">text</span>({</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">'Wikidata Unique Identifier (QID)'</span><span class="op">,</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">//</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> (</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">new</span> <span class="fu">URLSearchParams</span>(location<span class="op">.</span><span class="at">search</span>)<span class="op">.</span><span class="fu">get</span>(<span class="st">"id"</span>) <span class="op">||</span> <span class="st">"Q127786639"</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  )<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/_/g</span><span class="op">,</span> <span class="st">' '</span>)<span class="op">,</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">description</span><span class="op">:</span> <span class="st">"For example, AB 481 Category 1 is Q127786639 and Rifle is Q124072. Limited to 10 ingoing and outgoing edges."</span><span class="op">,</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">submit</span><span class="op">:</span> <span class="st">"Go"</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1" data-startfrom="8" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 7;"><span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>viewof id <span class="op">=</span> <span class="fu">text</span>({</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">'Wikidata Unique Identifier (QID)'</span><span class="op">,</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">//</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> (</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">new</span> <span class="fu">URLSearchParams</span>(location<span class="op">.</span><span class="at">search</span>)<span class="op">.</span><span class="fu">get</span>(<span class="st">"id"</span>) <span class="op">||</span> <span class="st">"Q127786639"</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  )<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/_/g</span><span class="op">,</span> <span class="st">' '</span>)<span class="op">,</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">description</span><span class="op">:</span> <span class="st">"For example, AB 481 Category 1 is Q127786639 and Rifle is Q124072. Limited to 10 ingoing and outgoing edges."</span><span class="op">,</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">submit</span><span class="op">:</span> <span class="st">"Go"</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -192,7 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-startfrom="20" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 19;"><span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {text} <span class="im">from</span> <span class="st">"@jashkenas/inputs"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2" data-startfrom="21" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 20;"><span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {text} <span class="im">from</span> <span class="st">"@jashkenas/inputs"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="declaration">
 
@@ -222,16 +222,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-startfrom="45" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 44;"><span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="co">// Here is the graph visualized</span></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="fu">dot</span><span class="vs">`digraph "</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">" {</span></span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="vs">  outputorder=edgesfirst</span></span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="vs">  graph[rankdir=LR, center=true]</span></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="vs">  node[shape=none, fontname="Source Serif Pro", fontsize=13]</span></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="vs">  edge[arrowsize=0.6, arrowhead=vee, color=gray]</span></span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span>nodes<span class="sc">}</span></span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span>edges<span class="sc">}</span></span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="vs"> }`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4" data-startfrom="44" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 43;"><span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co">// Here is the graph visualized</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="fu">dot</span><span class="vs">`digraph "</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs">" {</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="vs">  outputorder=edgesfirst</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a><span class="vs">  graph[rankdir=LR, center=true]</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a><span class="vs">  node[shape=none, fontname="Source Serif Pro", fontsize=13]</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="vs">  edge[arrowsize=0.6, arrowhead=vee, color=gray]</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span>nodes<span class="sc">}</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a><span class="vs">  </span><span class="sc">${</span>edges<span class="sc">}</span></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="vs"> }`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-4" data-nodetype="expression">
 
@@ -239,61 +239,61 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-startfrom="61" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 60;"><span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {queryDispatcher} <span class="im">from</span> <span class="st">"@lukesmurray/wikidata-sparql-helpers"</span></span>
-<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="vs">`SELECT ?parent ?parentLabel ?count</span></span>
-<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="vs">WHERE</span></span>
-<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a><span class="vs">{</span></span>
-<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="vs">  {</span></span>
-<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a><span class="vs">    SELECT ?parent (COUNT(?child) AS ?count)</span></span>
-<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a><span class="vs">    WHERE</span></span>
-<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="vs">    {</span></span>
-<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="vs">      ?parent wdt:P40 ?child.</span></span>
-<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a><span class="vs">    }</span></span>
-<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="vs">    GROUP BY ?parent</span></span>
-<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="vs">    ORDER BY DESC(?count)</span></span>
-<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="vs">    LIMIT 10</span></span>
-<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="vs">  }</span></span>
-<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="vs">  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }</span></span>
-<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
-<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="vs">ORDER BY DESC(?count)</span></span>
-<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a><span class="vs">LIMIT 10`</span></span>
+<div class="sourceCode cell-code" id="cb5" data-startfrom="60" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 59;"><span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {queryDispatcher} <span class="im">from</span> <span class="st">"@lukesmurray/wikidata-sparql-helpers"</span></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>query <span class="op">=</span> <span class="vs">`SELECT ?parent ?parentLabel ?count</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a><span class="vs">WHERE</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a><span class="vs">{</span></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a><span class="vs">  {</span></span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a><span class="vs">    SELECT ?parent (COUNT(?child) AS ?count)</span></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a><span class="vs">    WHERE</span></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a><span class="vs">    {</span></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="vs">      ?parent wdt:P40 ?child.</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a><span class="vs">    }</span></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a><span class="vs">    GROUP BY ?parent</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a><span class="vs">    ORDER BY DESC(?count)</span></span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a><span class="vs">    LIMIT 10</span></span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a><span class="vs">  }</span></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a><span class="vs">  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }</span></span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a><span class="vs">ORDER BY DESC(?count)</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a><span class="vs">LIMIT 10`</span></span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a>nodes <span class="op">=</span> picturein<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">" [URL="?id=</span><span class="sc">${</span>i<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)[i<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)<span class="op">.</span><span class="at">length</span><span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="vs">", fontcolor="#3182bd", target="_top"]`</span>)<span class="op">.</span><span class="fu">concat</span>(pictureout<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">" [URL="?id=</span><span class="sc">${</span>i<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)[i<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)<span class="op">.</span><span class="at">length</span><span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="vs">", fontcolor="#3182bd", target="_top"]`</span>))<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a>edges <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(picturein<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">" -&gt; "</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">itemLabel</span>)<span class="sc">}</span><span class="vs">" [label="</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">edgeLabel</span>)<span class="sc">}</span><span class="vs">"]`</span>)<span class="op">.</span><span class="fu">concat</span>(pictureout<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">itemLabel</span>)<span class="sc">}</span><span class="vs">" -&gt; "</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">" [label="</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">edgeLabel</span>)<span class="sc">}</span><span class="vs">"]`</span>))))<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a>nodes <span class="op">=</span> picturein<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">" [URL="?id=</span><span class="sc">${</span>i<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)[i<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)<span class="op">.</span><span class="at">length</span><span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="vs">", fontcolor="#3182bd", target="_top"]`</span>)<span class="op">.</span><span class="fu">concat</span>(pictureout<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">" [URL="?id=</span><span class="sc">${</span>i<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)[i<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">split</span>(<span class="st">"/"</span>)<span class="op">.</span><span class="at">length</span><span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="vs">", fontcolor="#3182bd", target="_top"]`</span>))<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a>edges <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="kw">new</span> <span class="bu">Set</span>(picturein<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">" -&gt; "</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">itemLabel</span>)<span class="sc">}</span><span class="vs">" [label="</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">edgeLabel</span>)<span class="sc">}</span><span class="vs">"]`</span>)<span class="op">.</span><span class="fu">concat</span>(pictureout<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">itemLabel</span>)<span class="sc">}</span><span class="vs">" -&gt; "</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">" [label="</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">edgeLabel</span>)<span class="sc">}</span><span class="vs">"]`</span>))))<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a>graphqueryout <span class="op">=</span> <span class="vs">`SELECT ?item ?itemLabel ?itemImage ?value ?valueLabel ?valueImage ?edgeLabel WHERE {</span></span>
-<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="vs">  {BIND(wd:</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs"> AS ?item)</span></span>
-<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="vs">  ?item ?wdt ?value.</span></span>
-<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="vs">  ?edge a wikibase:Property;</span></span>
-<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="vs">        wikibase:propertyType wikibase:WikibaseItem; # note: to show all statements, removing this is not enough, the graph view only shows entities</span></span>
-<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a><span class="vs">        wikibase:directClaim ?wdt.</span></span>
-<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a><span class="vs">  OPTIONAL { ?item wdt:P18 ?itemImage. }</span></span>
-<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a><span class="vs">  OPTIONAL { ?value wdt:P18 ?valueImage. }</span></span>
-<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a><span class="vs">  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}}</span></span>
-<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
-<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a><span class="vs">LIMIT 10`</span></span>
-<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>graphqueryin <span class="op">=</span> <span class="vs">`SELECT ?item ?itemLabel ?itemImage ?value ?valueLabel ?valueImage ?edgeLabel WHERE {</span></span>
-<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a><span class="vs">  {BIND(wd:</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs"> AS ?item)</span></span>
-<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a><span class="vs">  ?value ?wdt ?item.</span></span>
-<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a><span class="vs">  ?edge a wikibase:Property;</span></span>
-<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a><span class="vs">        wikibase:propertyType wikibase:WikibaseItem; # note: to show all statements, removing this is not enough, the graph view only shows entities</span></span>
-<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a><span class="vs">        wikibase:directClaim ?wdt.</span></span>
-<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a><span class="vs">  OPTIONAL { ?item wdt:P18 ?itemImage. }</span></span>
-<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a><span class="vs">  OPTIONAL { ?value wdt:P18 ?valueImage. }</span></span>
-<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a><span class="vs">  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}}</span></span>
-<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
-<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a><span class="vs">LIMIT 10`</span></span>
-<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a>pictureout <span class="op">=</span> queryDispatcher<span class="op">.</span><span class="fu">query</span>(graphqueryout)</span>
-<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a>picturein <span class="op">=</span> queryDispatcher<span class="op">.</span><span class="fu">query</span>(graphqueryin)</span>
-<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a>picturein<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">itemLabel</span>)<span class="sc">}</span><span class="vs">" -&gt; "</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">"`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>graphqueryout <span class="op">=</span> <span class="vs">`SELECT ?item ?itemLabel ?itemImage ?value ?valueLabel ?valueImage ?edgeLabel WHERE {</span></span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a><span class="vs">  {BIND(wd:</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs"> AS ?item)</span></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a><span class="vs">  ?item ?wdt ?value.</span></span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a><span class="vs">  ?edge a wikibase:Property;</span></span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a><span class="vs">        wikibase:propertyType wikibase:WikibaseItem; # note: to show all statements, removing this is not enough, the graph view only shows entities</span></span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a><span class="vs">        wikibase:directClaim ?wdt.</span></span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a><span class="vs">  OPTIONAL { ?item wdt:P18 ?itemImage. }</span></span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a><span class="vs">  OPTIONAL { ?value wdt:P18 ?valueImage. }</span></span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a><span class="vs">  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}}</span></span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a><span class="vs">LIMIT 10`</span></span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>graphqueryin <span class="op">=</span> <span class="vs">`SELECT ?item ?itemLabel ?itemImage ?value ?valueLabel ?valueImage ?edgeLabel WHERE {</span></span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a><span class="vs">  {BIND(wd:</span><span class="sc">${</span>id<span class="sc">}</span><span class="vs"> AS ?item)</span></span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a><span class="vs">  ?value ?wdt ?item.</span></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a><span class="vs">  ?edge a wikibase:Property;</span></span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a><span class="vs">        wikibase:propertyType wikibase:WikibaseItem; # note: to show all statements, removing this is not enough, the graph view only shows entities</span></span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a><span class="vs">        wikibase:directClaim ?wdt.</span></span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a><span class="vs">  OPTIONAL { ?item wdt:P18 ?itemImage. }</span></span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a><span class="vs">  OPTIONAL { ?value wdt:P18 ?valueImage. }</span></span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a><span class="vs">  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}}</span></span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a><span class="vs">}</span></span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a><span class="vs">LIMIT 10`</span></span>
+<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>pictureout <span class="op">=</span> queryDispatcher<span class="op">.</span><span class="fu">query</span>(graphqueryout)</span>
+<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a>picturein <span class="op">=</span> queryDispatcher<span class="op">.</span><span class="fu">query</span>(graphqueryin)</span>
+<span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>picturein<span class="op">.</span><span class="fu">map</span>(i <span class="kw">=&gt;</span> <span class="vs">`"</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">itemLabel</span>)<span class="sc">}</span><span class="vs">" -&gt; "</span><span class="sc">${</span><span class="fu">wrapText</span>(i<span class="op">.</span><span class="at">valueLabel</span>)<span class="sc">}</span><span class="vs">"`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-5-1" data-nodetype="declaration">
@@ -358,22 +358,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" data-startfrom="118" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 117;"><span id="cb6-118"><a href="#cb6-118" aria-hidden="true" tabindex="-1"></a>lexer <span class="op">=</span> text <span class="kw">=&gt;</span> text<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">[_ ]</span><span class="ss">/g</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-startfrom="120" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 119;"><span id="cb6-120"><a href="#cb6-120" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb6-121"><a href="#cb6-121" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> refs <span class="op">=</span> [</span>
-<span id="cb6-122"><a href="#cb6-122" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@mbostock/working-with-wikipedia-data'</span><span class="op">,</span></span>
-<span id="cb6-123"><a href="#cb6-123" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@mbostock/graphviz'</span><span class="op">,</span></span>
-<span id="cb6-124"><a href="#cb6-124" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@observablehq/how-observable-runs'</span><span class="op">,</span></span>
-<span id="cb6-125"><a href="#cb6-125" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@observablehq/notebook-visualizer'</span><span class="op">,</span></span>
-<span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@chriszs/wikipedia-concept-graph'</span></span>
-<span id="cb6-127"><a href="#cb6-127" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">;</span></span>
-<span id="cb6-128"><a href="#cb6-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-129"><a href="#cb6-129" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">md</span><span class="vs">`refs: </span><span class="sc">${</span>refs<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> <span class="vs">`[</span><span class="sc">${</span>d<span class="sc">}</span><span class="vs">](/</span><span class="sc">${</span>d<span class="sc">}</span><span class="vs">)`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">', '</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
-<span id="cb6-130"><a href="#cb6-130" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7" data-startfrom="123" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 122;"><span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> refs <span class="op">=</span> [</span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@mbostock/working-with-wikipedia-data'</span><span class="op">,</span></span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@mbostock/graphviz'</span><span class="op">,</span></span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@observablehq/how-observable-runs'</span><span class="op">,</span></span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@observablehq/notebook-visualizer'</span><span class="op">,</span></span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a>    <span class="st">'@chriszs/wikipedia-concept-graph'</span></span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">;</span></span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="fu">md</span><span class="vs">`refs: </span><span class="sc">${</span>refs<span class="op">.</span><span class="fu">map</span>(d <span class="kw">=&gt;</span> <span class="vs">`[</span><span class="sc">${</span>d<span class="sc">}</span><span class="vs">](/</span><span class="sc">${</span>d<span class="sc">}</span><span class="vs">)`</span>)<span class="op">.</span><span class="fu">join</span>(<span class="st">', '</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<div id="ojs-cell-6" data-nodetype="expression">
+<div id="ojs-cell-7" data-nodetype="expression">
 
 </div>
 </div>
@@ -384,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBpZCA9IHRleHQoe1xuICB0aXRsZTogJ1dpa2lkYXRhIFVuaXF1ZSBJZGVudGlmaWVyIChRSUQpJyxcbiAgLy9cbiAgdmFsdWU6IChcbiAgICBuZXcgVVJMU2VhcmNoUGFyYW1zKGxvY2F0aW9uLnNlYXJjaCkuZ2V0KFwiaWRcIikgfHwgXCJRMTI3Nzg2NjM5XCJcbiAgKS5yZXBsYWNlKC9fL2csICcgJyksXG4gIGRlc2NyaXB0aW9uOiBcIkZvciBleGFtcGxlLCBBQiA0ODEgQ2F0ZWdvcnkgMSBpcyBRMTI3Nzg2NjM5IGFuZCBSaWZsZSBpcyBRMTI0MDcyLiBMaW1pdGVkIHRvIDEwIGluZ29pbmcgYW5kIG91dGdvaW5nIGVkZ2VzLlwiLFxuICBzdWJtaXQ6IFwiR29cIlxufSlcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5pbXBvcnQge3RleHR9IGZyb20gXCJAamFzaGtlbmFzL2lucHV0c1wiXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbndyYXBUZXh0ID0gKHRleHQsIGxlbiA9IDE1KSA9PiB7XG4gIGNvbnN0IHdvcmRzID0gbGV4ZXIodGV4dCk7XG4gIGxldCBsaW5lcyA9ICcnO1xuICBsZXQgY291bnQgPSAwO1xuICBmb3IgKGxldCB3b3JkIG9mIHdvcmRzKSB7XG4gICAgaWYgKGNvdW50ICsgd29yZC5sZW5ndGggPj0gbGVuKSB7XG4gICAgICBsaW5lcyArPSBgXFxuJHt3b3JkfSBgO1xuICAgICAgY291bnQgPSB3b3JkLmxlbmd0aDtcbiAgICB9IGVsc2Uge1xuICAgICAgbGluZXMgKz0gYCR7d29yZH0gYDtcbiAgICAgIGNvdW50ICs9IHdvcmQubGVuZ3RoO1xuICAgIH1cbiAgfVxuICByZXR1cm4gbGluZXMudHJpbSgpO1xufVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbi8vIEhlcmUgaXMgdGhlIGdyYXBoIHZpc3VhbGl6ZWRcblxuZG90YGRpZ3JhcGggXCIke2lkfVwiIHtcbiAgb3V0cHV0b3JkZXI9ZWRnZXNmaXJzdFxuICBncmFwaFtyYW5rZGlyPUxSLCBjZW50ZXI9dHJ1ZV1cbiAgbm9kZVtzaGFwZT1ub25lLCBmb250bmFtZT1cIlNvdXJjZSBTZXJpZiBQcm9cIiwgZm9udHNpemU9MTNdXG4gIGVkZ2VbYXJyb3dzaXplPTAuNiwgYXJyb3doZWFkPXZlZSwgY29sb3I9Z3JheV1cbiAgJHtub2Rlc31cbiAgJHtlZGdlc31cbiB9YFxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbXBvcnQge3F1ZXJ5RGlzcGF0Y2hlcn0gZnJvbSBcIkBsdWtlc211cnJheS93aWtpZGF0YS1zcGFycWwtaGVscGVyc1wiXG5cbnF1ZXJ5ID0gYFNFTEVDVCA/cGFyZW50ID9wYXJlbnRMYWJlbCA/Y291bnRcbldIRVJFXG57XG4gIHtcbiAgICBTRUxFQ1QgP3BhcmVudCAoQ09VTlQoP2NoaWxkKSBBUyA/Y291bnQpXG4gICAgV0hFUkVcbiAgICB7XG4gICAgICA/cGFyZW50IHdkdDpQNDAgP2NoaWxkLlxuICAgIH1cbiAgICBHUk9VUCBCWSA/cGFyZW50XG4gICAgT1JERVIgQlkgREVTQyg/Y291bnQpXG4gICAgTElNSVQgMTBcbiAgfVxuICBTRVJWSUNFIHdpa2liYXNlOmxhYmVsIHsgYmQ6c2VydmljZVBhcmFtIHdpa2liYXNlOmxhbmd1YWdlIFwiZW5cIi4gfVxufVxuT1JERVIgQlkgREVTQyg/Y291bnQpXG5MSU1JVCAxMGBcblxuXG5ub2RlcyA9IHBpY3R1cmVpbi5tYXAoaSA9PiBgXCIke3dyYXBUZXh0KGkudmFsdWVMYWJlbCl9XCIgW1VSTD1cIj9pZD0ke2kudmFsdWUuc3BsaXQoXCIvXCIpW2kudmFsdWUuc3BsaXQoXCIvXCIpLmxlbmd0aC0xXX1cIiwgZm9udGNvbG9yPVwiIzMxODJiZFwiLCB0YXJnZXQ9XCJfdG9wXCJdYCkuY29uY2F0KHBpY3R1cmVvdXQubWFwKGkgPT4gYFwiJHt3cmFwVGV4dChpLnZhbHVlTGFiZWwpfVwiIFtVUkw9XCI/aWQ9JHtpLnZhbHVlLnNwbGl0KFwiL1wiKVtpLnZhbHVlLnNwbGl0KFwiL1wiKS5sZW5ndGgtMV19XCIsIGZvbnRjb2xvcj1cIiMzMTgyYmRcIiwgdGFyZ2V0PVwiX3RvcFwiXWApKS5qb2luKFwiXFxuXCIpXG5cbmVkZ2VzID0gQXJyYXkuZnJvbShuZXcgU2V0KHBpY3R1cmVpbi5tYXAoaSA9PiBgXCIke3dyYXBUZXh0KGkudmFsdWVMYWJlbCl9XCIgLT4gXCIke3dyYXBUZXh0KGkuaXRlbUxhYmVsKX1cIiBbbGFiZWw9XCIke3dyYXBUZXh0KGkuZWRnZUxhYmVsKX1cIl1gKS5jb25jYXQocGljdHVyZW91dC5tYXAoaSA9PiBgXCIke3dyYXBUZXh0KGkuaXRlbUxhYmVsKX1cIiAtPiBcIiR7d3JhcFRleHQoaS52YWx1ZUxhYmVsKX1cIiBbbGFiZWw9XCIke3dyYXBUZXh0KGkuZWRnZUxhYmVsKX1cIl1gKSkpKS5qb2luKFwiXFxuXCIpXG5cblxuZ3JhcGhxdWVyeW91dCA9IGBTRUxFQ1QgP2l0ZW0gP2l0ZW1MYWJlbCA/aXRlbUltYWdlID92YWx1ZSA/dmFsdWVMYWJlbCA/dmFsdWVJbWFnZSA/ZWRnZUxhYmVsIFdIRVJFIHtcbiAge0JJTkQod2Q6JHtpZH0gQVMgP2l0ZW0pXG4gID9pdGVtID93ZHQgP3ZhbHVlLlxuICA/ZWRnZSBhIHdpa2liYXNlOlByb3BlcnR5O1xuICAgICAgICB3aWtpYmFzZTpwcm9wZXJ0eVR5cGUgd2lraWJhc2U6V2lraWJhc2VJdGVtOyAjIG5vdGU6IHRvIHNob3cgYWxsIHN0YXRlbWVudHMsIHJlbW92aW5nIHRoaXMgaXMgbm90IGVub3VnaCwgdGhlIGdyYXBoIHZpZXcgb25seSBzaG93cyBlbnRpdGllc1xuICAgICAgICB3aWtpYmFzZTpkaXJlY3RDbGFpbSA/d2R0LlxuICBPUFRJT05BTCB7ID9pdGVtIHdkdDpQMTggP2l0ZW1JbWFnZS4gfVxuICBPUFRJT05BTCB7ID92YWx1ZSB3ZHQ6UDE4ID92YWx1ZUltYWdlLiB9XG4gIFNFUlZJQ0Ugd2lraWJhc2U6bGFiZWwgeyBiZDpzZXJ2aWNlUGFyYW0gd2lraWJhc2U6bGFuZ3VhZ2UgXCJbQVVUT19MQU5HVUFHRV0sZW5cIi59fVxufVxuTElNSVQgMTBgXG5cbmdyYXBocXVlcnlpbiA9IGBTRUxFQ1QgP2l0ZW0gP2l0ZW1MYWJlbCA/aXRlbUltYWdlID92YWx1ZSA/dmFsdWVMYWJlbCA/dmFsdWVJbWFnZSA/ZWRnZUxhYmVsIFdIRVJFIHtcbiAge0JJTkQod2Q6JHtpZH0gQVMgP2l0ZW0pXG4gID92YWx1ZSA/d2R0ID9pdGVtLlxuICA/ZWRnZSBhIHdpa2liYXNlOlByb3BlcnR5O1xuICAgICAgICB3aWtpYmFzZTpwcm9wZXJ0eVR5cGUgd2lraWJhc2U6V2lraWJhc2VJdGVtOyAjIG5vdGU6IHRvIHNob3cgYWxsIHN0YXRlbWVudHMsIHJlbW92aW5nIHRoaXMgaXMgbm90IGVub3VnaCwgdGhlIGdyYXBoIHZpZXcgb25seSBzaG93cyBlbnRpdGllc1xuICAgICAgICB3aWtpYmFzZTpkaXJlY3RDbGFpbSA/d2R0LlxuICBPUFRJT05BTCB7ID9pdGVtIHdkdDpQMTggP2l0ZW1JbWFnZS4gfVxuICBPUFRJT05BTCB7ID92YWx1ZSB3ZHQ6UDE4ID92YWx1ZUltYWdlLiB9XG4gIFNFUlZJQ0Ugd2lraWJhc2U6bGFiZWwgeyBiZDpzZXJ2aWNlUGFyYW0gd2lraWJhc2U6bGFuZ3VhZ2UgXCJbQVVUT19MQU5HVUFHRV0sZW5cIi59fVxufVxuTElNSVQgMTBgXG5cbnBpY3R1cmVvdXQgPSBxdWVyeURpc3BhdGNoZXIucXVlcnkoZ3JhcGhxdWVyeW91dClcblxucGljdHVyZWluID0gcXVlcnlEaXNwYXRjaGVyLnF1ZXJ5KGdyYXBocXVlcnlpbilcblxucGljdHVyZWluLm1hcChpID0+IGBcIiR7d3JhcFRleHQoaS5pdGVtTGFiZWwpfVwiIC0+IFwiJHt3cmFwVGV4dChpLnZhbHVlTGFiZWwpfVwiYCkuam9pbihcIlxcblwiKVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ7XG4gIGNvbnN0IHJlZnMgPSBbXG4gICAgJ0BtYm9zdG9jay93b3JraW5nLXdpdGgtd2lraXBlZGlhLWRhdGEnLFxuICAgICdAbWJvc3RvY2svZ3JhcGh2aXonLFxuICAgICdAb2JzZXJ2YWJsZWhxL2hvdy1vYnNlcnZhYmxlLXJ1bnMnLFxuICAgICdAb2JzZXJ2YWJsZWhxL25vdGVib29rLXZpc3VhbGl6ZXInLFxuICAgICdAY2hyaXN6cy93aWtpcGVkaWEtY29uY2VwdC1ncmFwaCdcbiAgXTtcblxuICByZXR1cm4gbWRgcmVmczogJHtyZWZzLm1hcChkID0+IGBbJHtkfV0oLyR7ZH0pYCkuam9pbignLCAnKX1gO1xufVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2lkJykifV19
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6InZpZXdvZiBpZCA9IHRleHQoe1xuICB0aXRsZTogJ1dpa2lkYXRhIFVuaXF1ZSBJZGVudGlmaWVyIChRSUQpJyxcbiAgLy9cbiAgdmFsdWU6IChcbiAgICBuZXcgVVJMU2VhcmNoUGFyYW1zKGxvY2F0aW9uLnNlYXJjaCkuZ2V0KFwiaWRcIikgfHwgXCJRMTI3Nzg2NjM5XCJcbiAgKS5yZXBsYWNlKC9fL2csICcgJyksXG4gIGRlc2NyaXB0aW9uOiBcIkZvciBleGFtcGxlLCBBQiA0ODEgQ2F0ZWdvcnkgMSBpcyBRMTI3Nzg2NjM5IGFuZCBSaWZsZSBpcyBRMTI0MDcyLiBMaW1pdGVkIHRvIDEwIGluZ29pbmcgYW5kIG91dGdvaW5nIGVkZ2VzLlwiLFxuICBzdWJtaXQ6IFwiR29cIlxufSlcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5pbXBvcnQge3RleHR9IGZyb20gXCJAamFzaGtlbmFzL2lucHV0c1wiXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbndyYXBUZXh0ID0gKHRleHQsIGxlbiA9IDE1KSA9PiB7XG4gIGNvbnN0IHdvcmRzID0gbGV4ZXIodGV4dCk7XG4gIGxldCBsaW5lcyA9ICcnO1xuICBsZXQgY291bnQgPSAwO1xuICBmb3IgKGxldCB3b3JkIG9mIHdvcmRzKSB7XG4gICAgaWYgKGNvdW50ICsgd29yZC5sZW5ndGggPj0gbGVuKSB7XG4gICAgICBsaW5lcyArPSBgXFxuJHt3b3JkfSBgO1xuICAgICAgY291bnQgPSB3b3JkLmxlbmd0aDtcbiAgICB9IGVsc2Uge1xuICAgICAgbGluZXMgKz0gYCR7d29yZH0gYDtcbiAgICAgIGNvdW50ICs9IHdvcmQubGVuZ3RoO1xuICAgIH1cbiAgfVxuICByZXR1cm4gbGluZXMudHJpbSgpO1xufVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTQiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbi8vIEhlcmUgaXMgdGhlIGdyYXBoIHZpc3VhbGl6ZWRcblxuZG90YGRpZ3JhcGggXCIke2lkfVwiIHtcbiAgb3V0cHV0b3JkZXI9ZWRnZXNmaXJzdFxuICBncmFwaFtyYW5rZGlyPUxSLCBjZW50ZXI9dHJ1ZV1cbiAgbm9kZVtzaGFwZT1ub25lLCBmb250bmFtZT1cIlNvdXJjZSBTZXJpZiBQcm9cIiwgZm9udHNpemU9MTNdXG4gIGVkZ2VbYXJyb3dzaXplPTAuNiwgYXJyb3doZWFkPXZlZSwgY29sb3I9Z3JheV1cbiAgJHtub2Rlc31cbiAgJHtlZGdlc31cbiB9YFxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTUiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJpbXBvcnQge3F1ZXJ5RGlzcGF0Y2hlcn0gZnJvbSBcIkBsdWtlc211cnJheS93aWtpZGF0YS1zcGFycWwtaGVscGVyc1wiXG5cbnF1ZXJ5ID0gYFNFTEVDVCA/cGFyZW50ID9wYXJlbnRMYWJlbCA/Y291bnRcbldIRVJFXG57XG4gIHtcbiAgICBTRUxFQ1QgP3BhcmVudCAoQ09VTlQoP2NoaWxkKSBBUyA/Y291bnQpXG4gICAgV0hFUkVcbiAgICB7XG4gICAgICA/cGFyZW50IHdkdDpQNDAgP2NoaWxkLlxuICAgIH1cbiAgICBHUk9VUCBCWSA/cGFyZW50XG4gICAgT1JERVIgQlkgREVTQyg/Y291bnQpXG4gICAgTElNSVQgMTBcbiAgfVxuICBTRVJWSUNFIHdpa2liYXNlOmxhYmVsIHsgYmQ6c2VydmljZVBhcmFtIHdpa2liYXNlOmxhbmd1YWdlIFwiZW5cIi4gfVxufVxuT1JERVIgQlkgREVTQyg/Y291bnQpXG5MSU1JVCAxMGBcblxuXG5ub2RlcyA9IHBpY3R1cmVpbi5tYXAoaSA9PiBgXCIke3dyYXBUZXh0KGkudmFsdWVMYWJlbCl9XCIgW1VSTD1cIj9pZD0ke2kudmFsdWUuc3BsaXQoXCIvXCIpW2kudmFsdWUuc3BsaXQoXCIvXCIpLmxlbmd0aC0xXX1cIiwgZm9udGNvbG9yPVwiIzMxODJiZFwiLCB0YXJnZXQ9XCJfdG9wXCJdYCkuY29uY2F0KHBpY3R1cmVvdXQubWFwKGkgPT4gYFwiJHt3cmFwVGV4dChpLnZhbHVlTGFiZWwpfVwiIFtVUkw9XCI/aWQ9JHtpLnZhbHVlLnNwbGl0KFwiL1wiKVtpLnZhbHVlLnNwbGl0KFwiL1wiKS5sZW5ndGgtMV19XCIsIGZvbnRjb2xvcj1cIiMzMTgyYmRcIiwgdGFyZ2V0PVwiX3RvcFwiXWApKS5qb2luKFwiXFxuXCIpXG5cbmVkZ2VzID0gQXJyYXkuZnJvbShuZXcgU2V0KHBpY3R1cmVpbi5tYXAoaSA9PiBgXCIke3dyYXBUZXh0KGkudmFsdWVMYWJlbCl9XCIgLT4gXCIke3dyYXBUZXh0KGkuaXRlbUxhYmVsKX1cIiBbbGFiZWw9XCIke3dyYXBUZXh0KGkuZWRnZUxhYmVsKX1cIl1gKS5jb25jYXQocGljdHVyZW91dC5tYXAoaSA9PiBgXCIke3dyYXBUZXh0KGkuaXRlbUxhYmVsKX1cIiAtPiBcIiR7d3JhcFRleHQoaS52YWx1ZUxhYmVsKX1cIiBbbGFiZWw9XCIke3dyYXBUZXh0KGkuZWRnZUxhYmVsKX1cIl1gKSkpKS5qb2luKFwiXFxuXCIpXG5cblxuZ3JhcGhxdWVyeW91dCA9IGBTRUxFQ1QgP2l0ZW0gP2l0ZW1MYWJlbCA/aXRlbUltYWdlID92YWx1ZSA/dmFsdWVMYWJlbCA/dmFsdWVJbWFnZSA/ZWRnZUxhYmVsIFdIRVJFIHtcbiAge0JJTkQod2Q6JHtpZH0gQVMgP2l0ZW0pXG4gID9pdGVtID93ZHQgP3ZhbHVlLlxuICA/ZWRnZSBhIHdpa2liYXNlOlByb3BlcnR5O1xuICAgICAgICB3aWtpYmFzZTpwcm9wZXJ0eVR5cGUgd2lraWJhc2U6V2lraWJhc2VJdGVtOyAjIG5vdGU6IHRvIHNob3cgYWxsIHN0YXRlbWVudHMsIHJlbW92aW5nIHRoaXMgaXMgbm90IGVub3VnaCwgdGhlIGdyYXBoIHZpZXcgb25seSBzaG93cyBlbnRpdGllc1xuICAgICAgICB3aWtpYmFzZTpkaXJlY3RDbGFpbSA/d2R0LlxuICBPUFRJT05BTCB7ID9pdGVtIHdkdDpQMTggP2l0ZW1JbWFnZS4gfVxuICBPUFRJT05BTCB7ID92YWx1ZSB3ZHQ6UDE4ID92YWx1ZUltYWdlLiB9XG4gIFNFUlZJQ0Ugd2lraWJhc2U6bGFiZWwgeyBiZDpzZXJ2aWNlUGFyYW0gd2lraWJhc2U6bGFuZ3VhZ2UgXCJbQVVUT19MQU5HVUFHRV0sZW5cIi59fVxufVxuTElNSVQgMTBgXG5cbmdyYXBocXVlcnlpbiA9IGBTRUxFQ1QgP2l0ZW0gP2l0ZW1MYWJlbCA/aXRlbUltYWdlID92YWx1ZSA/dmFsdWVMYWJlbCA/dmFsdWVJbWFnZSA/ZWRnZUxhYmVsIFdIRVJFIHtcbiAge0JJTkQod2Q6JHtpZH0gQVMgP2l0ZW0pXG4gID92YWx1ZSA/d2R0ID9pdGVtLlxuICA/ZWRnZSBhIHdpa2liYXNlOlByb3BlcnR5O1xuICAgICAgICB3aWtpYmFzZTpwcm9wZXJ0eVR5cGUgd2lraWJhc2U6V2lraWJhc2VJdGVtOyAjIG5vdGU6IHRvIHNob3cgYWxsIHN0YXRlbWVudHMsIHJlbW92aW5nIHRoaXMgaXMgbm90IGVub3VnaCwgdGhlIGdyYXBoIHZpZXcgb25seSBzaG93cyBlbnRpdGllc1xuICAgICAgICB3aWtpYmFzZTpkaXJlY3RDbGFpbSA/d2R0LlxuICBPUFRJT05BTCB7ID9pdGVtIHdkdDpQMTggP2l0ZW1JbWFnZS4gfVxuICBPUFRJT05BTCB7ID92YWx1ZSB3ZHQ6UDE4ID92YWx1ZUltYWdlLiB9XG4gIFNFUlZJQ0Ugd2lraWJhc2U6bGFiZWwgeyBiZDpzZXJ2aWNlUGFyYW0gd2lraWJhc2U6bGFuZ3VhZ2UgXCJbQVVUT19MQU5HVUFHRV0sZW5cIi59fVxufVxuTElNSVQgMTBgXG5cbnBpY3R1cmVvdXQgPSBxdWVyeURpc3BhdGNoZXIucXVlcnkoZ3JhcGhxdWVyeW91dClcblxucGljdHVyZWluID0gcXVlcnlEaXNwYXRjaGVyLnF1ZXJ5KGdyYXBocXVlcnlpbilcblxucGljdHVyZWluLm1hcChpID0+IGBcIiR7d3JhcFRleHQoaS5pdGVtTGFiZWwpfVwiIC0+IFwiJHt3cmFwVGV4dChpLnZhbHVlTGFiZWwpfVwiYCkuam9pbihcIlxcblwiKVxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTYiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJsZXhlciA9IHRleHQgPT4gdGV4dC5zcGxpdCgvW18gXS9nKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC03IiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoie1xuICBjb25zdCByZWZzID0gW1xuICAgICdAbWJvc3RvY2svd29ya2luZy13aXRoLXdpa2lwZWRpYS1kYXRhJyxcbiAgICAnQG1ib3N0b2NrL2dyYXBodml6JyxcbiAgICAnQG9ic2VydmFibGVocS9ob3ctb2JzZXJ2YWJsZS1ydW5zJyxcbiAgICAnQG9ic2VydmFibGVocS9ub3RlYm9vay12aXN1YWxpemVyJyxcbiAgICAnQGNocmlzenMvd2lraXBlZGlhLWNvbmNlcHQtZ3JhcGgnXG4gIF07XG5cbiAgcmV0dXJuIG1kYHJlZnM6ICR7cmVmcy5tYXAoZCA9PiBgWyR7ZH1dKC8ke2R9KWApLmpvaW4oJywgJyl9YDtcbn1cblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdpZCcpIn1dfQ==
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
@@ -429,18 +437,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -472,7 +469,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -480,7 +499,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

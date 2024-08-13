@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Jiaju Liu">
 
-<title>Developing a pluralist graph data structure – People’s Data</title>
+<title>Explore the Knowledge Graph – People’s Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,29 +108,27 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#working-within-the-constraints-of-wikidata" id="toc-working-within-the-constraints-of-wikidata" class="nav-link active" data-scroll-target="#working-within-the-constraints-of-wikidata">Working within the constraints of Wikidata</a></li>
-  <li><a href="#from-a-single-description-to-multiple-perspectives" id="toc-from-a-single-description-to-multiple-perspectives" class="nav-link" data-scroll-target="#from-a-single-description-to-multiple-perspectives">From a single description to multiple perspectives</a></li>
-  <li><a href="#multiple-perspectives-to-arrive-at-properties-for-the-concept-drone" id="toc-multiple-perspectives-to-arrive-at-properties-for-the-concept-drone" class="nav-link" data-scroll-target="#multiple-perspectives-to-arrive-at-properties-for-the-concept-drone">Multiple perspectives to arrive at properties for the concept “drone”</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Developing a pluralist graph data structure</h1>
+<h1 class="title">Explore the Knowledge Graph</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Jiaju Liu </p>
+          </div>
+  </div>
     
   
     
@@ -140,184 +139,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Data structures help us to find information within an otherwise undifferentiated swamp. But data structures are not neutral. They involve decision-making and they are constrained by those decisions. [put here text about why wikidata]</p>
-<section id="working-within-the-constraints-of-wikidata" class="level1">
-<h1>Working within the constraints of Wikidata</h1>
-<p>While Wikipedia allows for long narrative description of concepts, Wikidata is designed as a graph structure of nodes and links between nodes that can be explored quickly and easiy. Deriving properties from descriptions is a reductive process; important information and context is lost. To build a pluralist data structure, we sought a method for arriving at concise properties and values from long descriptions.</p>
-<p>For military equipment, ‘description’ can mean something very different depending on the source. They can range from functional categorization to marketing rhetoric meant to pursuade and entice buyers. That makes it difficult to draw comparisons. The approach outlined below takes us from rich description to properties that are more easily understood in relation to each other and their context. Businesses focus on technological</p>
-</section>
-<section id="from-a-single-description-to-multiple-perspectives" class="level1">
-<h1>From a single description to multiple perspectives</h1>
-<p>The most visible and available descriptions of military equipment come from the businesses that market the equipment for sale. We gather additional descriptions from these other sources: legal (government legislation), enforcement (police and other government agencies), civic (organizations and community groups), and individual (direct personal experience).</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 23%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 14%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>business</th>
-<th>Legal</th>
-<th>enforcement</th>
-<th>civic</th>
-<th>individual</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>multiple</td>
-<td>one to many</td>
-<td>multiple</td>
-<td>multiple</td>
-<td>multiple</td>
-</tr>
-<tr class="even">
-<td>capabilities</td>
-<td>category</td>
-<td>use</td>
-<td>effects</td>
-<td>experience</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="multiple-perspectives-to-arrive-at-properties-for-the-concept-drone" class="level1">
-<h1>Multiple perspectives to arrive at properties for the concept “drone”</h1>
-<p>When we began this project, most drone entries in Wikidata were for specific models made by manufacturers. We connect those different models to a general class, “Miniature Unmanned Aerial Vehicle” (alias “drone”). We then connect “drone” to California legislation AB481 Category 1 of which drone is a subclass. We connect California law enforcement agencies that use drones both to the class “drone” and to the specific model of drone when we have that information.</p>
-<div class="cell" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<svg width="672" height="480" viewbox="0.00 0.00 828.83 638.54" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 634.54)">
-<title>schema</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-634.54 824.83,-634.54 824.83,4 -4,4"></polygon>
-<!-- drone -->
-<g id="node1" class="node">
-<title>drone</title>
-<ellipse fill="white" stroke="#000000" stroke-opacity="0.533333" cx="542.9" cy="-316.04" rx="72" ry="72"></ellipse>
-<text text-anchor="middle" x="542.9" y="-311.84" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00">drone</text>
-</g>
-<!-- LEGAL -->
-<g id="node2" class="node">
-<title>LEGAL</title>
-<ellipse fill="yellowgreen" stroke="#000000" stroke-opacity="0.533333" cx="297.92" cy="-311.76" rx="72" ry="72"></ellipse>
-<text text-anchor="middle" x="297.92" y="-307.56" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00" fill="white">LEGAL</text>
-</g>
-<!-- LEGAL&#45;&gt;drone -->
-<g id="edge1" class="edge">
-<title>LEGAL-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M370.1,-313.02C398.5,-313.52 431.28,-314.09 460.6,-314.6"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="470.81,-314.78 460.74,-319.1 465.81,-314.94 460.81,-314.85 460.82,-314.6 460.82,-314.35 465.82,-314.44 460.89,-310.1 470.81,-314.78 470.81,-314.78"></polygon>
-<text text-anchor="middle" x="403.59" y="-317.11" font-family="Helvetica,Arial,sans-serif" font-size="11.00">Cat 1</text>
-</g>
-<!-- robot -->
-<g id="node7" class="node">
-<title>robot</title>
-<ellipse fill="#000000" fill-opacity="0.533333" stroke="#000000" stroke-opacity="0.533333" cx="72" cy="-326.85" rx="72" ry="72"></ellipse>
-<text text-anchor="middle" x="72" y="-322.65" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00">robot</text>
-</g>
-<!-- LEGAL&#45;&gt;robot -->
-<g id="edge2" class="edge">
-<title>LEGAL-&gt;robot</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M225.82,-316.58C203.1,-318.09 177.82,-319.78 154.44,-321.34"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="144.19,-322.03 153.87,-316.87 149.17,-321.44 154.16,-321.11 154.17,-321.36 154.19,-321.61 149.2,-321.94 154.47,-325.85 144.19,-322.03 144.19,-322.03"></polygon>
-<text text-anchor="middle" x="178.37" y="-322.26" font-family="Helvetica,Arial,sans-serif" font-size="11.00">Cat 1</text>
-</g>
-<!-- BUSINESS -->
-<g id="node3" class="node">
-<title>BUSINESS</title>
-<ellipse fill="magenta" stroke="#000000" stroke-opacity="0.533333" cx="511.54" cy="-72" rx="72" ry="72"></ellipse>
-<text text-anchor="middle" x="511.54" y="-67.8" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00" fill="white">BUSINESS</text>
-</g>
-<!-- BUSINESS&#45;&gt;drone -->
-<g id="edge3" class="edge">
-<title>BUSINESS-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M514.54,-144.03C517.56,-172.68 521.75,-205.78 526.05,-235.24"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="527.58,-245.5 521.66,-236.27 526.6,-240.59 525.86,-235.64 526.11,-235.61 526.35,-235.57 527.09,-240.52 530.56,-234.94 527.58,-245.5 527.58,-245.5"></polygon>
-<text text-anchor="middle" x="490.51" y="-192.94" font-family="Helvetica,Arial,sans-serif" font-size="11.00">heat sensitive</text>
-</g>
-<!-- BUSINESS&#45;&gt;drone -->
-<g id="edge4" class="edge">
-<title>BUSINESS-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M526.84,-142.45C531.16,-170.94 535.48,-204.01 538.77,-233.61"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="539.88,-243.92 534.33,-234.46 539.1,-238.97 538.56,-234 538.81,-233.97 539.06,-233.95 539.59,-238.92 543.28,-233.49 539.88,-243.92 539.88,-243.92"></polygon>
-<text text-anchor="middle" x="497.53" y="-178.13" font-family="Helvetica,Arial,sans-serif" font-size="11.00">high-res camera</text>
-</g>
-<!-- ENFORCEMENT -->
-<g id="node4" class="node">
-<title>ENFORCEMENT</title>
-<ellipse fill="deeppink" stroke="#000000" stroke-opacity="0.533333" cx="748.83" cy="-184.71" rx="72" ry="72"></ellipse>
-<text text-anchor="middle" x="748.83" y="-180.51" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00" fill="white">ENFORCEMENT</text>
-</g>
-<!-- ENFORCEMENT&#45;&gt;drone -->
-<g id="edge5" class="edge">
-<title>ENFORCEMENT-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M684.81,-218.16C660.59,-232.85 633,-250.37 608.63,-266.51"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="600.15,-272.16 605.98,-262.87 604.17,-269.18 608.33,-266.4 608.47,-266.61 608.61,-266.82 604.45,-269.59 610.97,-270.36 600.15,-272.16 600.15,-272.16"></polygon>
-<text text-anchor="middle" x="620.15" y="-232.44" font-family="Helvetica,Arial,sans-serif" font-size="11.00">surveillance</text>
-</g>
-<!-- ENFORCEMENT&#45;&gt;drone -->
-<g id="edge6" class="edge">
-<title>ENFORCEMENT-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M691.5,-228.64C667.96,-244.41 640.45,-262.04 615.53,-277.33"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="606.83,-282.63 613.02,-273.58 610.97,-279.82 615.24,-277.21 615.37,-277.43 615.5,-277.64 611.23,-280.24 617.71,-281.27 606.83,-282.63 606.83,-282.63"></polygon>
-<text text-anchor="middle" x="687.73" y="-256.29" font-family="Helvetica,Arial,sans-serif" font-size="11.00">communication</text>
-</g>
-<!-- INDIVIDUAL -->
-<g id="node5" class="node">
-<title>INDIVIDUAL</title>
-<ellipse fill="deepskyblue" stroke="#000000" stroke-opacity="0.533333" cx="743.62" cy="-455.95" rx="72" ry="72"></ellipse>
-<text text-anchor="middle" x="743.62" y="-451.75" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00" fill="white">INDIVIDUAL</text>
-</g>
-<!-- INDIVIDUAL&#45;&gt;drone -->
-<g id="edge9" class="edge">
-<title>INDIVIDUAL-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M688.31,-409.82C665.29,-392.99 638.29,-374.09 613.84,-357.67"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="605.31,-351.98 616.13,-353.79 609.61,-354.55 613.77,-357.32 613.63,-357.53 613.49,-357.74 609.33,-354.96 611.13,-361.27 605.31,-351.98 605.31,-351.98"></polygon>
-<text text-anchor="middle" x="634.27" y="-373.85" font-family="Helvetica,Arial,sans-serif" font-size="11.00">chilling</text>
-</g>
-<!-- INDIVIDUAL&#45;&gt;drone -->
-<g id="edge10" class="edge">
-<title>INDIVIDUAL-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M681.21,-420.01C657.45,-404.24 630.38,-385.45 606.51,-368.2"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="598.21,-362.16 608.95,-364.4 602.4,-364.9 606.45,-367.84 606.3,-368.04 606.15,-368.25 602.11,-365.31 603.66,-371.68 598.21,-362.16 598.21,-362.16"></polygon>
-<text text-anchor="middle" x="616.97" y="-397.4" font-family="Helvetica,Arial,sans-serif" font-size="11.00">intimidating</text>
-</g>
-<!-- CIVIC -->
-<g id="node6" class="node">
-<title>CIVIC</title>
-<ellipse fill="purple" stroke="#000000" stroke-opacity="0.533333" cx="504.25" cy="-558.54" rx="72" ry="72"></ellipse>
-<text text-anchor="middle" x="504.25" y="-554.34" font-family="Helvetica bold,Arial bold,sans-serif" font-size="14.00" fill="white">CIVIC</text>
-</g>
-<!-- CIVIC&#45;&gt;drone -->
-<g id="edge7" class="edge">
-<title>CIVIC-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M521.71,-488.4C526.86,-460.25 532.13,-427.59 536.28,-398.33"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="537.69,-388.13 540.77,-398.66 537.25,-393.12 536.56,-398.07 536.32,-398.04 536.07,-398 536.76,-393.05 531.86,-397.42 537.69,-388.13 537.69,-388.13"></polygon>
-<text text-anchor="middle" x="512.5" y="-446.66" font-family="Helvetica,Arial,sans-serif" font-size="11.00">privacy</text>
-</g>
-<!-- CIVIC&#45;&gt;drone -->
-<g id="edge8" class="edge">
-<title>CIVIC-&gt;drone</title>
-<path fill="none" stroke="black" stroke-width="1.5" d="M509.45,-486.44C513.32,-458.09 518.46,-425.42 523.61,-396.31"></path>
-<polygon fill="black" stroke="black" stroke-width="1.5" points="525.43,-386.18 528.09,-396.82 524.79,-391.15 523.91,-396.07 523.66,-396.02 523.42,-395.98 524.3,-391.06 519.23,-395.23 525.43,-386.18 525.43,-386.18"></polygon>
-<text text-anchor="middle" x="486.75" y="-431.48" font-family="Helvetica,Arial,sans-serif" font-size="11.00">mental health</text>
-</g>
-</g>
-</svg>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
