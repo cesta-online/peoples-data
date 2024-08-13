@@ -9,6 +9,10 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
+  page-footer:
+    center: |
+      This project is supported by 
+      [![](assets/cesta.svg){fig-alt="CESTA" width=65px}](https://cesta.stanford.edu)
 
 format:
   html:

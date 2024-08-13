@@ -1,5 +1,7 @@
 ---
 title: "Developing a pluralist graph data structure"
+author: "Catherine Nicole Coleman"
+date: "August 2024"
 ---
 
 Data structures help us to find information within an otherwise undifferentiated swamp. But data structures are not neutral. They involve decision-making and they are constrained by those decisions. 
