@@ -1,5 +1,20 @@
 ---
 title: "About"
+date: 08/13/2024
 ---
 
-About this site
+This site is where we share work in progress for the project, People's Data. The purpose of this project is to design an open system of data creation and use that is pluralist, interconnected, and changing. The core elements of the project are: a knowledge graph for flexibility in the data structure, machine learning to aid information discovery, community involvement to guide use and effectiveness of the system, and data curation that assumes that all perspectives are partial while making space for multiplicity and contestation. 
+
+This project is supported by CESTA, the Center for Spatial and Textual Analysis at Stanford University. This work builds on a previous (2023) CESTA-supported project, Know More Names, which, in turn was rooted in the Know Systemic Racism initiative led by Felicia Smith, the Racial Justice and Social Equity Librarian at Stanford Libraries.
+
+### Summer 2024 Project Team
+
+Jiaju Liu, CESTA Undergraduate Intern, Stanford University, class of 2025.
+
+Jorge Gonzalez, OCE Undergraduate Intern, College of San Mateo.
+
+Catherine Nicole Coleman, Project Lead, Digital Research Architect, Stanford Libraries.
+
+
+
+

@@ -5,6 +5,7 @@ project:
 website:
   title: "People's Data"
   navbar:
+    title: CESTA-Online Project | People's Data
     left:
       - href: index.qmd
         text: Home
@@ -19,6 +20,9 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    format:
+    code-fold: true
+    code-summary: "Show the code"
 
 
 
